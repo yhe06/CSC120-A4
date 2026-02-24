@@ -1,3 +1,7 @@
+Pablo tips:
+1) Draw out a relationship map between the objects
+2) Read the instructions completely at once
+
 # CSC120-A4: Chugging Along
 
 ## Outline
@@ -42,11 +46,11 @@ Let's pause a moment to think about the different kinds of relationships we'll w
  ## Step 1: The `Engine` class
  We recommend you start by implementing the `Engine` class. Your `Engine` class will need:
  
-  - to implement `EngineRequirements.java`.  
-  - a `FuelType` attribute to indicate what type of fuel it uses, and `double`s to store the current and maximum fuel levels (along with appropriate accessors for each).
-  - a constructor, which takes in initial values for the attributes named above and sets them appropriately (please do not add additional parameters to your constructor)
-  - a `refuel()` method which will reset the `Engine`'s current fuel level to the maximum, and which doesn't need to `return` anything
-  - a `go()` which will decrease the current fuel level, print some useful information (e.g. remaining fuel level), and return `True` if the fuel level is above 0 and `False` otherwise.
+  - ~ to implement `EngineRequirements.java`.  
+  - ~a `FuelType` attribute to indicate what type of fuel it uses, and `double`s to store the current and maximum fuel levels (along with appropriate accessors for each).
+  - ~a constructor, which takes in initial values for the attributes named above and sets them appropriately (please do not add additional parameters to your constructor)
+  - ~a `refuel()` method which will reset the `Engine`'s current fuel level to the maximum, and which doesn't need to `return` anything
+  - ~a `go()` which will decrease the current fuel level, print some useful information (e.g. remaining fuel level), and return `True` if the fuel level is above 0 and `False` otherwise.
 
 Remember, OOP is all about deciding which classes are responsible for which parts of the end solution. As you program, consider which of these attributes/methods should be `public`, and which should be `private`. These questions may be helpful to ask yourself:
  - Does **another class** need to be able to **read** this value? (If so, it could either be marked `public` or have an `accessor`)
@@ -67,12 +71,12 @@ You can use the `main` method defined below as a starting point for testing:
 ## Step 2: the `Car` class
 Next, we'll set to work on the `Car` class. The `Car` class will need:
 
- - to implement `CarRequirements.java`.
- - an `ArrayList` where it will store the `Passenger`s currently onboard, and an `int` for the `Car`'s maximum capacity (since `ArrayList`s will expand as we add objects, we'll need to manually limit their size)
- - a constructor, which takes in an initial value for the `Car`'s maximum capacity and initializes an appropriately-sized `ArrayList` (please do not add additional parameters to your constructor)
- - accessor-like methods `public int getCapacity()` and `public int seatsRemaining()` that return the maximum capacity and remaining seats, respectively
- - `addPassenger(Passenger p)` and `removePassenger(Passenger p)` methods to add or remove a `Passenger` from the `Car` and return `True` if the operation was successful, and `False` otherwise. (_Hint: don't forget to check that there are seats available if someone wants to board, and to confirm that the `Passenger` is actually onboard before trying to remove them! If you encounter a problem, you should `return False`._)
- - and a final method `printManifest()` that prints out a list of all `Passenger`s aboard the car (or "This car is EMPTY." if there is no one on board).
+ - ~ to implement `CarRequirements.java`.
+ - ~ an `ArrayList` where it will store the `Passenger`s currently onboard, and an `int` for the `Car`'s maximum capacity (since `ArrayList`s will expand as we add objects, we'll need to manually limit their size)
+ - ~ a constructor, which takes in an initial value for the `Car`'s maximum capacity and initializes an appropriately-sized `ArrayList` (please do not add additional parameters to your constructor)
+ - ~ accessor-like methods `public int getCapacity()` and `public int seatsRemaining()` that return the maximum capacity and remaining seats, respectively
+ - ~ `addPassenger(Passenger p)` and `removePassenger(Passenger p)` methods to add or remove a `Passenger` from the `Car` and return `True` if the operation was successful, and `False` otherwise. (_Hint: don't forget to check that there are seats available if someone wants to board, and to confirm that the `Passenger` is actually onboard before trying to remove them! If you encounter a problem, you should `return False`._)
+ - ~? and a final method `printManifest()` that prints out a list of all `Passenger`s aboard the car (or "This car is EMPTY." if there is no one on board).
 
 As before, consider which of these should be `public` and which should be `private` (potentially with `accessor`s and/or `manipulator`s).
 
@@ -83,6 +87,9 @@ Now that you've got a functional `Car` class, the `Passenger` class can be expan
 
  - `boardCar(Car c)` can call `c.addPassenger(this)` to board a given `Car` (_Hint: this method should check the value that gets `return`ed by `c.addPassenger(...)` in case the selected car is full._)
  - `getOffCar(Car c)` can call `c.removePassenger(this)` to get off a given `Car` (_Hint: this method should check the value that gets `return`ed by `c.removePassenger(...)` in case the `Passenger` wasn't actually onboard._)
+
+
+SO FAR: Confused on this step... read over a couple of times.
 
 ## Step 4: the `Train` class
 Now we're in the home stretch! To assemble your `Train`, you'll need (at minimum):
