@@ -5,4 +5,4 @@ Use this file to record your reflection on this assignment.
 
 - What worked, what didn't, what advice would you give someone taking this course in the future?
      
-    This assignment was more of a breeze to me compared to the previous assignments, I think Java syntax is getting more familiar to me. A lot of things that I tried worked! Advice I would give is to start early, so that you have time for your confusion to get sorted out. 
+    This assignment was more of a breeze to me compared to the previous assignments, I think Java syntax is getting more familiar to me. A lot of things that I tried worked! What didn't work for a bit was me trying to figure out how to implement int nCars and passengerCapacity into the constructor for the Train object, but with the help of Michaela, I figured out that iit should be a loop. Advice I would give is to start early, so that you have time for your confusion to get sorted out. 
