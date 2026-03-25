@@ -16,7 +16,7 @@ public class Passenger implements PassengerRequirements{
 
         // The parameters for .addPassenger is just 'this' because it refers to the Passenger Object as a whole.
         if (c.addPassenger(this)) {
-            c.passengers.add(this);           
+       
         } else {
             System.out.println("The car is at max capacity.");
         }
@@ -29,8 +29,8 @@ public class Passenger implements PassengerRequirements{
      */
     public void getOffCar(Car c){
 
-        if (c.removePassenger(this)) {
-            c.passengers.remove(this);           
+        if (c.removePassenger(this)) {   
+    
         } else {
             System.out.println("This passenger is not on board.");
         }
@@ -51,22 +51,23 @@ public class Passenger implements PassengerRequirements{
     Passenger passenger3 = new Passenger("Aiden");
 
     passenger1.boardCar(myCar);
+    passenger1.boardCar(myCar);
     passenger2.boardCar(myCar);
     passenger3.boardCar(myCar);
 
     myCar.printManifest();
 
-    System.out.println(myCar.seatsRemaining());
-    System.out.println(myCar.getCapacity());
+    // System.out.println(myCar.seatsRemaining());
+    // System.out.println(myCar.getCapacity());
 
-    passenger1.getOffCar(myCar);
-    passenger2.getOffCar(myCar);
+    // passenger1.getOffCar(myCar);
+    // passenger2.getOffCar(myCar);
 
-    passenger3.getOffCar(myCar);
+    // passenger3.getOffCar(myCar);
 
-    myCar.printManifest();
+    // myCar.printManifest();
 
-    System.out.println(myCar.seatsRemaining());
+    // System.out.println(myCar.seatsRemaining());
 
 }
 }

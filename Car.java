@@ -7,7 +7,7 @@ public class Car implements CarRequirements {
     private int capacity;
 
     // The ArrayList will be filled with Passenger Objects.
-    public ArrayList<Passenger> passengers;
+    private ArrayList<Passenger> passengers;
     
     // Constructor 
 
@@ -58,10 +58,12 @@ public class Car implements CarRequirements {
     public Boolean addPassenger(Passenger p) {
         int seatsRemaining = this.seatsRemaining();
 
-        if (seatsRemaining > 0){;
+        if (seatsRemaining > 0 && !this.passengers.contains(p)){;
+            this.passengers.add(p);
              return true;
 
         } else {
+            System.out.println("Not enough seats or passenger already on board.");
             return false;
 
         }
@@ -77,6 +79,7 @@ public class Car implements CarRequirements {
 
         // Check if a Passenger Object is in the Car Array List for passengers, aka check if passenger is actually ON BOARD. Car cannot put passenger on car, passenger has to board car. 
         if (this.passengers.contains(p)) {
+            this.passengers.remove(p);
             return true;
 
         } else {
@@ -118,17 +121,11 @@ public class Car implements CarRequirements {
     Passenger Passenger3 = new Passenger("Aiden");
 
     myCar.addPassenger(Passenger1);
+    myCar.addPassenger(Passenger1);
     myCar.addPassenger(Passenger2);
     myCar.addPassenger(Passenger3);
 
     myCar.printManifest();
-
-    myCar.removePassenger(Passenger2);
-    myCar.printManifest();
-
-    System.out.println(myCar.seatsRemaining());
-
-    System.out.println(myCar.capacity);
 
     }
 
